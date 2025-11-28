@@ -1,65 +1,177 @@
-<!doctype html><html><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Gulati Tour and Travels – Agra</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gulati Tour and Travels — Agra</title>
 <link rel="stylesheet" href="styles.css">
-</head><body>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#">
+      <img src="./logo.png" alt="Gulati Tour and Travels logo" class="brand-logo"
+        onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/gulatitourandtravels/GULATI-Tour-Travels-/main/logo.png'">
+      <div class="brand-text">
+        <h1>Gulati Tour and Travels</h1>
+        <p class="tag">Airport · Wedding · Outstation — Agra</p>
+      </div>
+    </a>
+    <div class="header-actions">
+      <a class="call-btn" href="tel:+919528043350">Call: +91 9528043350</a>
+      <a class="whatsapp-btn" href="https://wa.me/919528043350" target="_blank" rel="noreferrer">WhatsApp</a>
+    </div>
+  </div>
+</header>
 
-<header><h1>Gulati Tour and Travels</h1>
-<p>Call/WhatsApp: +91 9528043350</p></header>
+<main class="container">
+  <section class="hero">
+    <h2>Fixed One-way & Two-way Rates — Parking as Add‑on</h2>
+    <p>Instant booking via WhatsApp. Choose route, trip type and parking if needed.</p>
+  </section>
 
-<section>
-<h2>One‑Way Routes (Updated Rates)</h2>
+  <section id="rates" class="rates">
+    <h3>Rates — One-way / Two-way / Parking</h3>
+    <div class="rate-grid">
+      <div class="rate-card">
+        <h4>Agra → Delhi Airport</h4>
+        <p><strong>One-way:</strong> Sedan ₹3500 · Ertiga ₹4000 · Innova ₹5500</p>
+        <p><strong>Two-way (same day):</strong> Sedan ₹6500 · Ertiga ₹7500 · Innova ₹9500</p>
+        <p><strong>Parking add-on:</strong> ₹120 (airport parking) · Toll: actuals</p>
+      </div>
 
-<h3>Agra → Delhi Airport</h3>
-<ul>
-<li>Sedan (Dzire): ₹3500</li>
-<li>Ertiga: ₹4000</li>
-<li>Innova: ₹5500</li>
-</ul>
+      <div class="rate-card">
+        <h4>Agra → Jaipur</h4>
+        <p><strong>One-way:</strong> Sedan ₹3200 · Ertiga ₹3800 · Innova ₹5000</p>
+        <p><strong>Two-way (same day):</strong> Sedan ₹6000 · Ertiga ₹7000 · Innova ₹9000</p>
+        <p><strong>Parking add-on:</strong> City parking / Toll: actuals</p>
+      </div>
 
-<h3>Agra → Lucknow</h3>
-<ul>
-<li>Sedan (Dzire): ₹4500</li>
-<li>Ertiga: ₹5500</li>
-<li>Innova: ₹7000</li>
-</ul>
+      <div class="rate-card">
+        <h4>Agra → Noida</h4>
+        <p><strong>One-way:</strong> Sedan ₹4200 · Ertiga ₹5000 · Innova ₹6800</p>
+        <p><strong>Two-way (same day):</strong> Sedan ₹7000 · Ertiga ₹8200 · Innova ₹10800</p>
+        <p><strong>Parking add-on:</strong> Mall/society parking: actuals · Toll: actuals</p>
+      </div>
+    </div>
+  </section>
 
-<h3>Agra → Jaipur</h3>
-<ul>
-<li>Sedan (Dzire): ₹3200</li>
-<li>Ertiga: ₹3800</li>
-<li>Innova: ₹5000</li>
-</ul>
-</section>
+  <section id="booking" class="booking">
+    <h3>Quick Booking</h3>
+    <p>Fill the form — we'll confirm by WhatsApp. Parking is optional add-on (will be included in message).</p>
 
-<section>
-<h2>Quick Booking (WhatsApp)</h2>
-<form onsubmit="return sendWA();">
-<label>Name<input id="n"></label>
-<label>Pickup<input id="p"></label>
-<label>Drop<input id="d"></label>
-<label>Date/Time<input id="t" type="datetime-local"></label>
-<label>Service<select id="s">
-<option>Agra → Delhi (One-way)</option>
-<option>Agra → Lucknow (One-way)</option>
-<option>Agra → Jaipur (One-way)</option>
-<option>Wedding Car</option>
-<option>Airport Transfer</option>
-</select></label>
-<button type="submit">Send to WhatsApp</button>
-</form>
-</section>
+    <form id="bookingForm" onsubmit="return sendWhatsApp();">
+      <label>Full name
+        <input id="name" required>
+      </label>
+
+      <label>Phone (WhatsApp)
+        <input id="phone" type="tel" placeholder="+91..." required>
+      </label>
+
+      <label>Route / Service
+        <select id="service" required>
+          <optgroup label="One-way">
+            <option>Agra → Delhi (One-way)</option>
+            <option>Agra → Jaipur (One-way)</option>
+            <option>Agra → Noida (One-way)</option>
+          </optgroup>
+          <optgroup label="Two-way (Same day)">
+            <option>Agra → Delhi (Two-way)</option>
+            <option>Agra → Jaipur (Two-way)</option>
+            <option>Agra → Noida (Two-way)</option>
+          </optgroup>
+          <option>Airport Pickup/Drop (Agra–Delhi Airport)</option>
+          <option>Wedding Car / VIP</option>
+          <option>Outstation (custom)</option>
+        </select>
+      </label>
+
+      <label>Pickup (address)
+        <input id="pickup" required>
+      </label>
+
+      <label>Drop (address)
+        <input id="drop">
+      </label>
+
+      <label>Date & Time
+        <input id="datetime" type="datetime-local" required>
+      </label>
+
+      <label>Car type
+        <select id="car">
+          <option>Dzire / Sedan</option>
+          <option>Ertiga / MPV</option>
+          <option>Innova / SUV</option>
+        </select>
+      </label>
+
+      <label>Parking required?
+        <select id="parking">
+          <option value="No">No</option>
+          <option value="Yes - Airport ₹120">Yes - Airport ₹120</option>
+          <option value="Yes - City (actuals)">Yes - City (actuals)</option>
+        </select>
+      </label>
+
+      <label>Additional notes
+        <textarea id="notes" rows="3"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button type="submit">Send to WhatsApp</button>
+        <button type="button" onclick="document.getElementById('bookingForm').reset()">Reset</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <p>© Gulati Tour and Travels — Agra · Call / WhatsApp: +91 9528043350</p>
+  </footer>
+</main>
 
 <script>
-function sendWA(){
-var msg=`Booking Request:
-Name: ${n.value}
-Service: ${s.value}
-Pickup: ${p.value}
-Drop: ${d.value}
-Time: ${t.value}`;
-window.open("https://wa.me/919528043350?text="+encodeURIComponent(msg));
-return false;}
+function sendWhatsApp(){
+  var name = document.getElementById('name').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var service = document.getElementById('service').value;
+  var pickup = document.getElementById('pickup').value.trim();
+  var drop = document.getElementById('drop').value.trim();
+  var datetime = document.getElementById('datetime').value;
+  var car = document.getElementById('car').value;
+  var parking = document.getElementById('parking').value;
+  var notes = document.getElementById('notes').value.trim();
+
+  if(!name||!phone||!pickup||!datetime){
+    alert('Please fill Name, Phone, Pickup and Date & Time.');
+    return false;
+  }
+
+  var cleaned = phone.replace(/[^0-9]/g,'');
+  if(cleaned.length===10) cleaned = '91'+cleaned;
+
+  var lines = [];
+  lines.push('Hi Gulati Tour and Travels,');
+  lines.push('I would like to book a service. Details:');
+  lines.push('Name: ' + name);
+  lines.push('Phone: ' + phone);
+  lines.push('Service: ' + service);
+  lines.push('Trip Type: ' + (service.includes('Two-way')? 'Two-way' : (service.includes('One-way')? 'One-way' : service)));
+  lines.push('Pickup: ' + pickup);
+  if(drop) lines.push('Drop: ' + drop);
+  lines.push('Date & Time: ' + datetime);
+  lines.push('Car Type: ' + car);
+  lines.push('Parking: ' + parking);
+  if(notes) lines.push('Notes: ' + notes);
+  var text = lines.join('\n');
+
+  var waNumber = '919528043350';
+  var url = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(text);
+  window.open(url, '_blank');
+  return false;
+}
 </script>
 
-</body></html>
+</body>
+</html>
