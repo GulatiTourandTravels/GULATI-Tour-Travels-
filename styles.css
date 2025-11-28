@@ -1,0 +1,44 @@
+
+/* styles.css - Gulati Tour and Travels */
+:root{
+  --accent:#063a6b;
+  --accent-2:#ff9f1c;
+  --muted:#666;
+  --maxwidth:1100px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,Arial,Helvetica,sans-serif;margin:0;color:#222;line-height:1.45;background:#fff}
+.container{max-width:var(--maxwidth);margin:0 auto;padding:18px}
+.site-header{background:var(--accent);color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:62px;width:auto;border-radius:6px;background:#fff;padding:6px}
+.logo-fallback{font-weight:700;font-size:18px}
+.brand-text h1{margin:0;font-size:18px}
+.brand-text p{margin:0;font-size:13px;opacity:0.95}
+.cta{background:var(--accent-2);color:#fff;padding:9px 12px;border-radius:6px;text-decoration:none}
+.hero{padding:28px 18px;text-align:center;background:linear-gradient(180deg, #f7fafe 0%, #fff 100%)}
+.hero h2{margin:0 0 8px;font-size:22px;color:var(--accent)}
+.hero p{margin:0 0 12px;color:var(--muted)}
+.btn{background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;text-decoration:none;display:inline-block}
+.services h3,.fleet-grid h3{ text-align:center }
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;padding:12px}
+.card{border:1px solid #eee;padding:14px;border-radius:8px;background:#fff}
+.fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.fleet-item{border:1px solid #eee;padding:12px;border-radius:8px;background:#fff}
+.booking{background:#fafafa;padding:18px;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.booking-form{display:grid;gap:10px;max-width:720px;margin:0 auto}
+.booking-form label{display:block;font-size:14px}
+.booking-form input, .booking-form select, .booking-form textarea{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn.secondary{background:#fff;color:var(--accent);border:1px solid #ccc}
+.testimonials{padding:12px;text-align:center}
+.muted{color:var(--muted)}
+.faq{padding:12px}
+.site-footer{background:#f6f7fb;padding:18px 0;margin-top:18px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;align-items:start}
+.site-footer a{color:var(--accent);text-decoration:none}
+copyright{display:block;text-align:center}
+@media(min-width:900px){
+  .brand-text h1{font-size:20px}
+  .cta{padding:10px 16px}
+}

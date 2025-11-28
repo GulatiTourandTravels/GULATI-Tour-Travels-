@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gulati Tour and Travels — Airport • Wedding • Local (Agra)</title>
+  <meta name="description" content="Gulati Tour and Travels - Airport pickups, wedding cars, local & outstation taxi service in Agra. 24x7 | Safe Drivers | Instant Booking" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src='https://drive.google.com/uc?export=view&id=1myE1cb6LYuVSPdxNmU4ue0sxNT_y_n55' alt='Gulati Tour and Travels logo' class='logo'>
+      <div class="brand-text">
+        <h1>Gulati Tour and Travels</h1>
+        <p class="tag">Airport • Wedding • Local — Agra</p>
+      </div>
+    </div>
+    <a class="cta" href="tel:+919XXXXXXXXX">Call / WhatsApp: +91 9528043350</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Safe Drivers • Fixed Airport Rates • Special Wedding Packages</h2>
+      <p>Instant booking via WhatsApp — Reliable rides across Agra and nearby cities.</p>
+      <a class="btn" href="#booking">Book Now</a>
+    </section>
+
+    <section class="services container">
+      <h3>Our Services</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>Airport Transfers</h4>
+          <p>Agra → Delhi Airport: Sedan ₹3500 • Ertiga ₹4000 • Innova ₹5500</p>
+        </article>
+        <article class="card">
+          <h4>Wedding Packages</h4>
+          <p>VIP Barat cars, Guest pickup/drop, Full-day packages — customizable.</p>
+        </article>
+        <article class="card">
+          <h4>Local & Outstation</h4>
+          <p>Hourly city rides, Outstation per-km pricing, luggage-friendly vehicles.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fleet" class="container">
+      <h3>Our Fleet & Rates (Sample)</h3>
+      <div class="fleet-grid">
+        <div class="fleet-item">
+          <h4>Dzire / Sedan</h4>
+          <p>City: ₹149 min • Outstation: ₹12/km</p>
+        </div>
+        <div class="fleet-item">
+          <h4>Ertiga / MPV</h4>
+          <p>City: ₹249 min • Outstation: ₹14/km</p>
+        </div>
+        <div class="fleet-item">
+          <h4>Innova / SUV</h4>
+          <p>City: ₹499 min • Outstation: ₹18/km</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="container booking">
+      <h3>Quick Booking</h3>
+      <p>Fill the form — we'll confirm by WhatsApp. To accept payments, use Razorpay links (see README).</p>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree or JotForm action URL -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
+        <label>Full name<input name="name" required></label>
+        <label>Phone (WhatsApp)<input name="phone" type="tel" required></label>
+
+        <label>Service
+          <select name="service" required>
+            <option value="airport">Airport Transfer</option>
+            <option value="wedding">Wedding Car</option>
+            <option value="local">Local / Hourly</option>
+            <option value="outstation">Outstation</option>
+          </select>
+        </label>
+
+        <label>Pickup (address)<input name="pickup" required></label>
+        <label>Drop (address)<input name="drop"></label>
+        <label>Date & Time<input name="date" type="datetime-local" required></label>
+        <label>Car type
+          <select name="car">
+            <option>Dzire / Sedan</option>
+            <option>Ertiga / MPV</option>
+            <option>Innova / SUV</option>
+          </select>
+        </label>
+        <label>Extra requests<textarea name="message" rows="3"></textarea></label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Booking</button>
+          <button type="button" class="btn secondary" onclick="window.location.href='https://wa.me/919528043350?text=Hello%20Gulati%20Tour%20and%20Travels%20I%20want%20to%20book%20a%20ride'">Book on WhatsApp</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="testimonials container">
+      <h3>Testimonials</h3>
+      <p class="muted">"Very punctual and clean cars — wedding transport was perfect!" — Rekha</p>
+      <p class="muted">"Airport pickup on time, driver was polite." — Anand</p>
+    </section>
+
+    <section class="faq container">
+      <h3>FAQ</h3>
+      <details><summary>Cancellation policy</summary><p>Cancel up to 6 hours before pickup free. For same-day cancellations small fee applies.</p></details>
+      <details><summary>Driver verification</summary><p>All drivers are verified and hold valid licenses; vehicles have active insurance and PUC.</p></details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Gulati Tour and Travels</h4>
+        <p>Agra • 24×7 Support: +91 9528043350</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#booking">Book Now</a> • <a href="#fleet">Fleet & Rates</a></p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p>GST: (Add GST if registered) • Udyam: (Add if registered)</p>
+      </div>
+    </div>
+    <p class="copyright">© 2025 Gulati Tour and Travels</p>
+  </footer>
+
+</body>
+</html>
