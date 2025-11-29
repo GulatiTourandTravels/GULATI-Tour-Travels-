@@ -5,12 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gulati Tour and Travels — Agra</title>
 <link rel="stylesheet" href="styles.css">
+<meta name="description" content="Gulati Tour and Travels Agra - Airport pickup/drop, Agra to Delhi/Noida, Jaipur, Lucknow one-way taxi. WhatsApp booking +91 9528043350.">
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner container">
     <a class="brand" href="#">
-      <img src="logo.png" alt="Gulati Tour and Travels logo" class="brand-logo">
+      <img src="logo.png" alt="Gulati Tour and Travels logo" class="brand-logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/gulatitourandtravels/GULATI-Tour-Travels-/main/logo.png'">
       <div class="brand-text">
         <h1>Gulati Tour and Travels</h1>
         <p class="tag">Airport · Wedding · Outstation — Agra</p>
@@ -25,40 +26,47 @@
 
 <main class="container">
   <section class="hero">
-    <h2>Fixed One-way & Two-way Rates — Parking as Add‑on</h2>
-    <p>Instant booking via WhatsApp. Choose route, trip type and parking if needed.</p>
+    <h2>Safe Drivers · Fixed One-way Rates · Airport Pickup / Drop</h2>
+    <p>Instant booking via WhatsApp. Reliable rides across Agra to Delhi, Noida, Jaipur & Lucknow.</p>
     <a class="primary-btn" href="#booking">Book Now</a>
   </section>
 
   <section id="rates" class="rates">
-    <h3>Rates — One-way / Two-way / Parking</h3>
+    <h3>One-way Rates (Agra)</h3>
     <div class="rate-grid">
       <div class="rate-card">
-        <h4>Agra → Delhi Airport</h4>
-        <p><strong>One-way:</strong> Sedan ₹3500 · Ertiga ₹4000 · Innova ₹5500</p>
-        <p><strong>Two-way (same day):</strong> Sedan ₹6500 · Ertiga ₹7500 · Innova ₹9500</p>
-        <p><strong>Parking add-on:</strong> ₹120 (airport parking) · Toll: actuals</p>
+        <h4>Agra → Delhi Airport / Noida</h4>
+        <p><strong>Sedan:</strong> ₹3200 – ₹3500</p>
+        <p><strong>Ertiga / MPV:</strong> ₹4000</p>
+        <p><strong>Innova / SUV:</strong> ₹5500</p>
+        <p><strong>Parking (Airport):</strong> ₹120 · Toll: Actuals</p>
       </div>
 
       <div class="rate-card">
         <h4>Agra → Jaipur</h4>
-        <p><strong>One-way:</strong> Sedan ₹3200 · Ertiga ₹3800 · Innova ₹5000</p>
-        <p><strong>Two-way (same day):</strong> Sedan ₹6000 · Ertiga ₹7000 · Innova ₹9000</p>
-        <p><strong>Parking add-on:</strong> City parking / Toll: actuals</p>
+        <p><strong>Sedan:</strong> ₹3200 – ₹3500</p>
+        <p><strong>Ertiga:</strong> ₹3800 – ₹4000</p>
+        <p><strong>Innova:</strong> ₹5000</p>
+        <p><strong>Parking / Toll:</strong> Actuals</p>
       </div>
 
       <div class="rate-card">
-        <h4>Agra → Noida</h4>
-        <p><strong>One-way:</strong> Sedan ₹4200 · Ertiga ₹5000 · Innova ₹6800</p>
-        <p><strong>Two-way (same day):</strong> Sedan ₹7000 · Ertiga ₹8200 · Innova ₹10800</p>
-        <p><strong>Parking add-on:</strong> Mall/society parking: actuals · Toll: actuals</p>
+        <h4>Agra → Lucknow</h4>
+        <p><strong>Sedan:</strong> ₹4500 – ₹5000</p>
+        <p><strong>Ertiga:</strong> ₹5500</p>
+        <p><strong>Innova:</strong> ₹7000</p>
+        <p><strong>Parking / Toll:</strong> Actuals</p>
       </div>
+    </div>
+
+    <div class="note">
+      <p><strong>Two-way / Round Trip:</strong> Per-km rate — finalized after discussion on call. Toll & parking as actuals.</p>
     </div>
   </section>
 
   <section id="booking" class="booking">
     <h3>Quick Booking</h3>
-    <p>Fill the form — we'll confirm by WhatsApp. Parking is optional add-on (will be included in message).</p>
+    <p>Fill the form — we'll confirm by WhatsApp. Parking is optional add-on and will be included in the message.</p>
 
     <form id="bookingForm" onsubmit="return sendWhatsApp();">
       <label>Full name
@@ -73,13 +81,9 @@
         <select id="service" required>
           <optgroup label="One-way">
             <option>Agra → Delhi (One-way)</option>
-            <option>Agra → Jaipur (One-way)</option>
             <option>Agra → Noida (One-way)</option>
-          </optgroup>
-          <optgroup label="Two-way (Same day)">
-            <option>Agra → Delhi (Two-way)</option>
-            <option>Agra → Jaipur (Two-way)</option>
-            <option>Agra → Noida (Two-way)</option>
+            <option>Agra → Jaipur (One-way)</option>
+            <option>Agra → Lucknow (One-way)</option>
           </optgroup>
           <option>Airport Pickup/Drop (Agra–Delhi Airport)</option>
           <option>Wedding Car / VIP</option>
@@ -124,6 +128,7 @@
         <button type="button" onclick="document.getElementById('bookingForm').reset()">Reset</button>
       </div>
     </form>
+
   </section>
 
   <footer class="site-footer">
@@ -164,6 +169,7 @@ function sendWhatsApp(){
   lines.push('Car Type: ' + car);
   lines.push('Parking: ' + parking);
   if(notes) lines.push('Notes: ' + notes);
+  lines.push('Thanks!');
   var text = lines.join('\n');
 
   var waNumber = '919528043350';

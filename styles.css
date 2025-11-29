@@ -15,6 +15,7 @@
 .primary-btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:700}
 .rate-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
 .rate-card{background:#fff;padding:14px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+.note{margin-top:12px;padding:10px;background:#fff;border-radius:8px}
 .booking{margin-top:16px}
 .booking label{display:block;margin:10px 0;font-weight:600}
 .booking input, .booking select, .booking textarea{width:100%;padding:10px;border:1px solid #e0e6ea;border-radius:6px;margin-top:6px}
